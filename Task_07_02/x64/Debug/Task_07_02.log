@@ -1,0 +1,7 @@
+﻿  Task_07_02.cpp
+D:\GitHub projects\Algorithms\Task_07_02\Task_07_02.cpp(103,31): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\GitHub projects\Algorithms\Task_07_02\Task_07_02.cpp(153,51): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+D:\GitHub projects\Algorithms\Task_07_02\Task_07_02.cpp(156,51): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+D:\GitHub projects\Algorithms\Task_07_02\Task_07_02.cpp(159,51): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+D:\GitHub projects\Algorithms\Task_07_02\Task_07_02.cpp(163,51): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Task_07_02.vcxproj -> D:\GitHub projects\Algorithms\Task_07_02\x64\Debug\Task_07_02.exe

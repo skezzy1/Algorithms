@@ -1,52 +1,54 @@
-#include <iostream>
-#include <vector>
-
+#include<iostream>
+#include<vector>
 using namespace std;
 
-int sum_of_digits(int n) {
-    int sum = 0;
-    while (n > 0) {
-        sum += n % 10;
-        n /= 10;
-    }
-    return sum;
+int div_sum(int num)
+{
+  int sum{ 0 }, k;
+  while (num!=0)
+  {
+    k = num % 10;
+    num /= 10;
+    sum += k;
+  }
+  return sum;
 }
 
-int main() {
-    // Зчитування масиву та числа s
-    int n, s;
-    cin >> n >> s;
-    vector<int> a(n);
-    for (int i = 0; i < n; i++) {
-        cin >> a[i];
+int main()
+{
+  int arr[]= {1, 5 , 14,23, 22, 3, 23, 14,41, 50}, c;
+  cout << "Enter number: "; 
+  cin >> c;
+  int sum{ 0 }, k{ 0 }, len{ 0 }, last_len{ 0 }, pos{ 0 }, best_pos{ 0 }, end_pos{ 0 };
+ 
+  for (int i = 0; i < 10; i++)
+  {
+    while (div_sum(arr[i+k]) == c)
+    {
+      k++;
+      len = i;
     }
-    // Пошук найдовшої підпослідовності з сумою цифр s
-    int start_index = 0;
-    int end_index = -1;
-    int max_length = 0;
-    for (int i = 0; i < n; i++) {
-        int sum = 0;
-        for (int j = i; j < n; j++) {
-            sum += sum_of_digits(a[j]);
-            if (sum == s && j - i + 1 > max_length) {
-                max_length = j - i + 1;
-                start_index = i;
-                end_index = j;
-            }
-        }
+    if (k>best_pos)
+    {
+      best_pos = k;
+      pos = len;
+      last_len = i + k;
     }
+    k = 0;
+  }
 
-    // Виведення результату
-    if (max_length > 0) {
-        cout << "Longest subsequence with sum of digits equal to " << s << ": ";
-        for (int i = start_index; i <= end_index; i++) {
-            cout << a[i] << " ";
-        }
-        cout << "(indices " << start_index << " to " << end_index << ")" << endl;
-    }
-    else {
-        cout << "There is no subsequence with sum of digits equal to " << s << endl;
-    }
-
-    return 0;
+  for (int i = 0; i < 10; i++)
+  {
+    cout << arr[i] << " ";
+  }
+  cout << endl;
+  end_pos = best_pos + pos - 1;
+  cout << "Start index: " << pos << " " << "Last index: " << end_pos << endl;
+  for (int i = pos; i < end_pos; i++)
+  {
+      cout << arr[i] << " ";
+  }
+  cout << endl;
+  cout << "Сount of elements: " << best_pos << endl;
+  return 0;
 }
