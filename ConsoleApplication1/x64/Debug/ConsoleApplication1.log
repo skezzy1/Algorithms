@@ -1,3 +1,0 @@
-﻿  ConsoleApplication1.cpp
-D:\GitHub projects\Algorithms\ConsoleApplication1\ConsoleApplication1.cpp(12,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
-  ConsoleApplication1.vcxproj -> D:\GitHub projects\Algorithms\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe
